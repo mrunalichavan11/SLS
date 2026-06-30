@@ -7,10 +7,12 @@ html, body{
   -webkit-text-size-adjust: 100%;
 }
 
-
+html {
+    color-scheme: light;
+}
 
 .hero {
-  height: 500px;
+  height: 800px;
   width: 100%;
   background: url("img/7.png") no-repeat center center/cover;
   position: relative;
@@ -40,7 +42,7 @@ html, body{
 }
 
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: 5.5rem;
   font-weight: 500;
   line-height: 1.2;
 
@@ -52,7 +54,7 @@ html, body{
     font-weight:100;
     letter-spacing:1px;
     color:#ff7a00;
- font-size: 45px;
+ font-size: 46px;
 }
 
 .hero p {
@@ -84,7 +86,7 @@ padding:13px 55px;
 
     border:2px solid #ff7a00;
 
-    font-size:25px;
+    font-size:35px;
 
     font-weight:600;
 
@@ -136,39 +138,14 @@ padding:13px 55px;
 
 }
 
+.contact-btn {
+    font-size: 22px !important;
+}
+
 /*==========================
       CONTACT BUTTON
 ==========================*/
 
-.contact-btn{
-
-    padding:13px 28px;
-
-    background:#ff7a00;
-
-    color:#fff;
-
-    text-decoration:none;
-
-    border-radius:50px;
-
-    border:2px solid #ff7a00;
-
-    font-size:17px;
-
-    font-weight:600;
-
-    transition:.35s ease;
-
-}
-
-.contact-btn:hover{
-
-    background:transparent;
-
-    color:#ff7a00;
-
-}
 
 /*==========================
       EXPLORE BUTTON
@@ -262,7 +239,7 @@ padding:13px 55px;
 
     padding:18px 40px;
 
-    font-size:22px;
+    font-size:30px;
 
     transition:.3s;
 
@@ -422,7 +399,7 @@ padding:13px 55px;
     background: #ff7a00;
     color: #fff;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 600;
     border-radius: 50px;
     border: 2px solid #ff7a00;
@@ -533,7 +510,7 @@ text-align: center;
 }
 
 .clients-heading h2{
-   font-size: 32px;
+   font-size: 35px;
   font-family: "Sekuya", system-ui;
   font-style: normal;
   font-weight: 100;
@@ -623,7 +600,7 @@ text-align: center;
 
     color:#fff;
 
-    font-size:17px;
+    font-size:20px;
 
     font-weight:600;
 
@@ -896,127 +873,74 @@ font-family: "Sekuya", system-ui;
 
 }
 
-.map{
-margin-left: 40px;
-margin-bottom: 50px;
-margin-top: 50px;
+.footer{
+    background:#111;
+    color:#fff;
+    padding:60px 8% 20px;
+    font-family:"Poppins",sans-serif;
 }
 
-.contact-container {
- background: #f9fafb;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  align-items: flex-start;
- margin-left: 100px;
-margin-right: 100px;
-margin-bottom: 50px;
-  border-radius: 20px;
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* horizontal, vertical, blur, color */
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    gap:100px;
+    flex-wrap:wrap;
 }
 
-.map iframe {
-  height: 300px;
-  border: 0;
-  border-radius: 8px;
+.footer-left,
+.footer-right{
+    display:flex;
+    flex-direction:column;
 }
 
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 900px;
-margin-top: 70px;
+.footer h3{
+    color:#ff7a00;
+    font-size:30px;
+    margin-bottom:20px;
 }
 
-.contact-info h2 {
-  font-size: 50px;
-  color: #FF6600; /* Orange title */
-  margin-bottom: 20px;
- margin-left: 40px;
-     font-family: "Sekuya", system-ui;
-   font-style: normal;
-  font-weight: 100;
- font-family: "Sekuya", system-ui;
-    letter-spacing: 1px;
-color:  #ff7a00;
-
+.footer-left a{
+    color:#fff;
+    text-decoration:none;
+    margin-bottom:12px;
+    transition:.3s;
+     font-size:25px;
 }
 
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 20px;
-  color: #333;
-  text-decoration: none;
- margin-left: 100px;
-margin-top: -30px;
+.footer-left a:hover{
+    color:#ff7a00;
+    padding-left:8px;
 }
 
-.contact-item i {
-  color: #FF6600; /* Orange phone icon */
+.footer-contact{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    color:#fff;
+    text-decoration:none;
+    margin-bottom:18px;
+    transition:.3s;
+   font-size: 30px;
 }
 
-.social-icons {
-  display: flex;
-  gap: 15px;
- margin-left: 125px;
+.footer-contact img{
+    width:26px;
+    height:26px;
 }
 
-.social-icon img {
-  display: block;
-  width: 40px;
-  height: 40px;
+.footer-contact:hover{
+    color:#ff7a00;
+    transform:translateX(5px);
 }
 
-.profile-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 15px;
- margin-left: 50px;
-margin-top: -20px;
-
+.footer-bottom{
+    margin-top:40px;
+    border-top:1px solid rgba(255,255,255,.15);
+    padding-top:20px;
+    text-align:center;
+    color:#aaa;
+    font-size:20px;
 }
-
-.profile-img {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  object-fit: cover;
- margin-bottom: 10px;
-  align-items: center;
-object-position: center 20%;
-}
-
-.profile-title {
-  font-size: 25px;
-  font-weight: 600;
-  margin: 4px 0;
-  color: #333;
-}
-
-.profile-subtitle {
-  font-size: 18px;
-  color: #777;
-}
-
-.no{
-margin-right: 50px;
-}
-
-.contact-item img {
-  width: 24px;
-  height: 24px;
-}
-
-.social-icon img {
-  width: 40px;
-  height: 40px;
-}
-
 
 /*=========================
  TRANSITION
