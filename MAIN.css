@@ -1351,33 +1351,6 @@ font-weight:bold;
 
 /* Initial State */
 
-.hero-content h2{
-    opacity:0;
-    transform:translateX(-60px);
-    transition:all .60s ease;
-}
-
-.hero-content h1{
-    opacity:0;
-    transform:translateX(-60px);
-    transition:all .60s ease;
-}
-
-.hero-btn{
-    opacity:0;
-    transform:translateY(-35px);
-    transition:all .60s ease;
-}
-
-/* Show */
-
-.hero-content h2.show,
-.hero-content h1.show,
-.hero-btn.show{
-    opacity:1;
-    transform:translate(0);
-}
-
 .services-heading p{
 
     opacity:0;
