@@ -1,39 +1,11 @@
-const swiper = new Swiper(".clientsSwiper",{
-
-    slidesPerView:4,
-
-    spaceBetween:20,
-
-    loop:true,
-
-    speed:700,
-
-    allowTouchMove:true
-
-});
-
-document.querySelector(".nextBtn").addEventListener("click",()=>{
-
-    swiper.slideNext();
-
-});
-
-document.querySelector(".prevBtn").addEventListener("click",()=>{
-
-    swiper.slidePrev();
-
-});
-
-
-
 const menuBtn = document.getElementById("menuBtn");
-const sideMenu = document.getElementById("sideMenu");
+const mobileMenu = document.getElementById("mobileMenu");
 const closeBtn = document.getElementById("closeBtn");
 const overlay = document.getElementById("overlay");
 
 menuBtn.onclick = function(){
 
-    sideMenu.classList.add("active");
+    mobileMenu.classList.add("active");
     overlay.classList.add("active");
 
 }
@@ -43,126 +15,197 @@ overlay.onclick = closeMenu;
 
 function closeMenu(){
 
-    sideMenu.classList.remove("active");
+    mobileMenu.classList.remove("active");
     overlay.classList.remove("active");
 
 }
 
-// Close menu after clicking any link
+new Swiper(".clientSwiper",{
 
-document.querySelectorAll(".side-menu a").forEach(link=>{
+    loop:true,
 
-    link.addEventListener("click",()=>{
+    autoplay:{
+        delay:1000,
+        disableOnInteraction:false,
+    },
 
-        closeMenu();
+    navigation:{
+        nextEl:".swiper-button-next",
+        prevEl:".swiper-button-prev",
+    },
 
-    });
+    spaceBetween:20,
+
+    breakpoints:{
+
+        0:{
+            slidesPerView:1
+        },
+
+        768:{
+            slidesPerView:2
+        },
+
+        1024:{
+            slidesPerView:4
+        }
+
+    }
 
 });
 
-
+const counters = document.querySelectorAll(".counter");
 
 const observer = new IntersectionObserver((entries) => {
 
     entries.forEach(entry => {
 
-        if (entry.isIntersecting) {
+        if(entry.isIntersecting){
+
+            const counter = entry.target;
+
+            const target = +counter.dataset.target;
+
+            let count = 0;
+
+            const speed = target / 80;
+
+            const update = () => {
+
+                count += speed;
+
+                if(count < target){
+
+                    counter.innerText = Math.ceil(count) + "+";
+
+                    requestAnimationFrame(update);
+
+                }else{
+
+                    counter.innerText = target + "+";
+
+                }
+
+            };
+
+            update();
+
+            observer.unobserve(counter);
+
+        }
+
+    });
+
+});
+
+counters.forEach(counter => observer.observe(counter));
+
+
+window.addEventListener("load", () => {
+
+    setTimeout(() => {
+        document.querySelector(".hero-content h2").classList.add("show");
+    }, 50);
+
+    setTimeout(() => {
+        document.querySelector(".hero-content h1").classList.add("show");
+    }, 180);
+
+    setTimeout(() => {
+        document.querySelector(".hero-btn").classList.add("show");
+    }, 300);
+
+});
+
+
+const servicesObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
 
             entry.target.classList.add("show");
 
+            servicesObserver.unobserve(entry.target);
+
         }
 
     });
 
-}, {
-    threshold: 0.2
+},{
+    threshold:0.3
 });
 
-// Observe all gallery images
-document.querySelectorAll(".gallery-row img").forEach((img, index) => {
+servicesObserver.observe(document.querySelector(".services-heading"));
 
-    img.style.transitionDelay = `${index * 0.15}s`; // Staggered animation
 
-    observer.observe(img);
 
-});
-
-// Observe the button
-document.querySelectorAll(".gallery-btn").forEach(btn => {
-
-    observer.observe(btn);
-
-});
-
-const serviceHeading = document.querySelector(".animate-left");
-
-const headingObserver = new IntersectionObserver((entries) => {
+const designerObserver = new IntersectionObserver((entries) => {
 
     entries.forEach(entry => {
 
-        if (entry.isIntersecting) {
+        if(entry.isIntersecting){
+
+            entry.target.querySelector(".designer-left").classList.add("show");
+            entry.target.querySelector(".designer-right").classList.add("show");
+
+            designerObserver.unobserve(entry.target);
+
+        }
+
+    });
+
+},{
+    threshold:0.3
+});
+
+designerObserver.observe(document.querySelector(".designer-section"));
+
+const lightDeskObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
             entry.target.classList.add("show");
-            headingObserver.unobserve(entry.target); // Run only once
-        }
 
-    });
-
-}, {
-    threshold: 0.3
-});
-
-headingObserver.observe(serviceHeading);
-
-const aboutObserver = new IntersectionObserver((entries) => {
-
-    entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-
-            document.querySelector(".about-image").classList.add("show");
-
-            setTimeout(() => {
-                document.querySelector(".about-content").classList.add("show");
-            }, 200); // Slight delay
-
-            aboutObserver.unobserve(entry.target);
+            lightDeskObserver.unobserve(entry.target);
 
         }
 
     });
 
-}, {
-    threshold: 0.3
+},{
+    threshold:0.3
 });
 
-aboutObserver.observe(document.querySelector(".about-section"));
+lightDeskObserver.observe(document.querySelector(".lightdesk-heading"));
 
-const equipmentCards = document.querySelectorAll(".equipment-card");
 
-const equipmentObserver = new IntersectionObserver((entries) => {
+const clientHeading = document.querySelector(".clients-heading");
 
-    entries.forEach(entry => {
+const clientObserver = new IntersectionObserver((entries)=>{
 
-        if (entry.isIntersecting) {
+    if(entries[0].isIntersecting){
 
-            equipmentCards.forEach((card, index) => {
+        const letters = document.querySelectorAll(".clients-heading h2 span");
 
-                setTimeout(() => {
-                    card.classList.add("show");
-                }, index * 180); // 180ms delay between cards
+        letters.forEach((letter,index)=>{
 
-            });
+            setTimeout(()=>{
 
-            equipmentObserver.unobserve(entry.target);
+                letter.style.opacity = "1";
 
-        }
+            }, index * 120);
 
-    });
+        });
 
-}, {
-    threshold: 0.2
+        clientObserver.disconnect();
+
+    }
+
+},{
+    threshold:0.4
 });
 
-// Observe the first card (or the equipment section if you have one)
-equipmentObserver.observe(document.querySelector(".equipment-grid"));
-
+clientObserver.observe(clientHeading);

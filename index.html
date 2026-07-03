@@ -1,13 +1,19 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 
 <head>
-<meta name="viewport" content="width=1200">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="theme-color" content="#ffffff">
 <title>Stage Light Solutions</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <link rel="stylesheet" href="MAIN.css" >
 <meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,294 +25,216 @@
 
 <body class="home-page">
 
-<section class="hero-wrapper">
+<header class="header">
 
-    <header class="main-header" id="hm">
+  <div class="logo">
+    <a href="#hm">
+        <img src="img/logo.jpeg" alt="Stage Light Solutions Logo">
+    </a>
+</div>
 
-        <div class="top-bar">
+    <nav class="navbar">
 
-            <div class="logo">
-                Stage Light Solutions
-            </div>
+        <ul class="nav-links">
 
-            <div class="header-right">
+            <li><a href="#home">Home</a></li>
 
-                
+            <li><a href="https://events-shows.my.canva.site/">Events</a></li>
 
-                <a href="javascript:void(0)"
-                   class="menu-trigger"
-                   id="menuBtn">
+            <li><a href="#services">Services</a></li>
 
-                    ☰ Explore
+            <li><a href="#clients">Clients</a></li>
 
-                </a>
+            <li><a href="#ft">Contact</a></li>
 
-            </div>
+        </ul>
 
+        <div class="menu-btn" id="menuBtn">
+            ☰
         </div>
 
-    </header>
+    </nav>
 
-</section>
+</header>
 
-<!-- SIDE MENU -->
+<!-- Mobile Side Menu -->
 
-<div class="side-menu" id="sideMenu">
+<div class="mobile-menu" id="mobileMenu">
 
     <div class="close-btn" id="closeBtn">&times;</div>
 
+    <a href="#home">Home</a>
+
     <a href="https://events-shows.my.canva.site/">Events</a>
+
     <a href="#services">Services</a>
+
     <a href="#clients">Clients</a>
+
     <a href="#ft">Contact</a>
 
 </div>
 
 <div class="overlay" id="overlay"></div>
 
-<section class="hero">
-    <div class="hero-content">
-        <h1 class="slide-left">
-            Welcome to <br>
-            <span>Stage Light Solutions</span>
-        </h1>
+<section class="hero" id="home">
 
-        <a href="https://wa.me/918108438962"
-           target="_blank"
-           class="btn contact-btn">
-            Contact Now
-        </a>
+    <div class="hero-overlay">
+
+        <div class="hero-content">
+
+            <h2>Welcome to</h2>
+
+            <h1>Stage Light Solutions</h1>
+
+            <a href="https://wa.me/918108438962" class="hero-btn">Contact Now</a>
+
+        </div>
+
     </div>
+
 </section>
 
+<section class="counter-section">
 
+    <div class="counter-container">
+
+        <div class="counter-box">
+
+            <h2 class="counter" data-target="500">0</h2>
+            <p>Happy Clients</p>
+
+        </div>
+
+        <div class="counter-box">
+
+            <h2 class="counter" data-target="1000">0</h2>
+            <p>Events</p>
+
+        </div>
+
+        <div class="counter-box">
+
+            <h2 class="counter" data-target="20">0</h2>
+            <p>Years of Experience</p>
+
+        </div>
+
+    </div>
+
+</section>
 
 <section class="gallery-section">
 
-    <div class="gallery-row two">
+
+    <div class="gallery">
+
         <img src="img/ms3.jpg" alt="">
         <img src="img/ms2.jpg" alt="">
-    </div>
 
-    <div class="gallery-row two">
         <img src="img/ms5.jpg" alt="">
         <img src="img/ms6.jpg" alt="">
-    </div>
 
-    <div class="gallery-row two">
         <img src="img/s8.jpg" alt="">
-         <img src="img/s7.jpg" alt="">
-    </div>
+        <img src="img/s7.jpg" alt="">
 
-    <div class="gallery-row two">
         <img src="img/33.jpeg" alt="">
         <img src="img/s3.jpg" alt="">
+
     </div>
-
 <div class="gallery-btn">
-    <a href="https://events-shows.my.canva.site/" class="view-more-btn">VIEW MORE</a>
+    <a href="https://events-shows.my.canva.site/" target="_blank" class="view-more-btn">
+        View More
+    </a>
 </div>
-
 </section>
 
 <section class="services-section" id="services">
 
-    <div class="services-overlay">
+    <div class="services-heading">
 
-        <div class="services-container">
+        <p>──────── OUR</p>
 
-            <!-- Left Heading -->
-            <div class="services-heading animate-left">
-                <p class="small-title">──────── OUR</p>
-                <h2>SERVICES</h2>
-            </div>
+        <h2>SERVICES</h2>
 
-            <!-- Right Boxes -->
-            <div class="services-grid">
+    </div>
 
-                <div class="service-card">
-                    <h3>Stage Light Design</h3>
-                    <p>Creative lighting concepts tailored to every event and performance.</p>
-                </div>
+    <div class="services-grid">
 
-                <div class="service-card">
-                    <h3>Light Operation</h3>
-                    <p>Professional live lighting operation with precision and safety.</p>
-                </div>
+        <!-- Card 1 -->
+        <div class="service-card">
+            <h3>Stage Light Design</h3>
+            <p>Creative lighting concepts tailored to every event and performance.</p>
+        </div>
 
-                <div class="service-card">
-                    <h3>Lighting Setup</h3>
-                    <p>Complete setup and alignment for flawless visual execution.</p>
-                </div>
+        <!-- Card 2 -->
+        <div class="service-card">
+            <h3>Light Operation</h3>
+            <p>Professional live lighting operation with precision and safety.</p>
+        </div>
 
-                <div class="service-card">
-                    <h3>Fixed Installation</h3>
-                    <p>Permanent lighting installations for venues and studios.</p>
-                </div>
+        <!-- Card 3 -->
+        <div class="service-card">
+            <h3>Lighting Setup</h3>
+            <p>Complete setup and alignment for flawless visual execution.</p>
+        </div>
 
-                <div class="service-card">
-                    <h3>Console Training</h3>
-                    <p>Hands-on training for lighting consoles and control systems.</p>
-                </div>
+        <!-- Card 4 -->
+        <div class="service-card">
+            <h3>Fixed Installation</h3>
+            <p>Permanent lighting installations for venues and studios.</p>
+        </div>
 
-                <div class="service-card">
-                    <h3>Light Repair Service</h3>
-                    <p>Reliable repair and maintenance for lighting equipment..</p>
-                </div>
+        <!-- Card 5 -->
+        <div class="service-card">
+            <h3>Console Training</h3>
+            <p>Hands-on training for lighting consoles and control systems.</p>
+        </div>
 
-                <div class="service-card center-card">
-                    <h3>Online Video Switching</h3>
-                    <p>Seamless video switching solutions for live productions.</p>
-                </div>
+        <!-- Card 6 -->
+        <div class="service-card">
+            <h3>Light Repair Service</h3>
+            <p>Reliable repair and maintenance for lighting equipment.</p>
+        </div>
 
-            </div>
-
+        <!-- Card 7 -->
+        <div class="service-card">
+            <h3>Online Video Switching</h3>
+            <p>Seamless video switching solutions for live productions.</p>
         </div>
 
     </div>
 
 </section>
 
-<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<section class="designer-section">
 
-<section class="clients-section" id="clients">
+    <div class="designer-container">
 
-    <div class="clients-heading">
-        <h2>CLIENTS</h2>
-    </div>
+        <!-- LEFT -->
+        <div class="designer-left">
 
-    <div class="swiper clientsSwiper">
+            <img src="img/profile.jpg" alt="Santosh Jadhav">
 
-        <div class="swiper-wrapper">
+            <h3>Santosh Jadhav</h3>
 
-            <div class="swiper-slide">
-                <div class="client-card">
-                    <h3>Amazon India</h3>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="client-card">
-                    <h3>Kon Honar Maharashtracha Ladka Kirtankar</h3>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="client-card">
-                    <h3>Movers and Shakers - Season 2</h3>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="client-card">
-                    <h3>Star Majha</h3>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="client-card">
-                    <h3>Electrocraft</h3>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="client-card">
-                    <h3>Modern Stage Service, Delhi</h3>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="client-card">
-                    <h3>TCA Lights</h3>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="client-card">
-                    <h3>FLOS</h3>
-                </div>
-            </div>
-
-     <div class="swiper-slide">
-                <div class="client-card">
-                    <h3>Showtime</h3>
-                </div>
-            </div>
-
-<div class="swiper-slide">
-                <div class="client-card">
-                    <h3>Wizcraft</h3>
-                </div>
-            </div>
-
-<div class="swiper-slide">
-                <div class="client-card">
-                    <h3>Landmark Events</h3>
-                </div>
-            </div>
-
-<div class="swiper-slide">
-                <div class="client-card">
-                    <h3>Ulhas Sahastrabudhe Lights</h3>
-                </div>
-            </div>
-
-<div class="swiper-slide">
-                <div class="client-card">
-                    <h3>Jai Mahashtra</h3>
-                </div>
-            </div>
-
-<div class="swiper-slide">
-                <div class="client-card">
-                    <h3>Reliance Media Works</h3>
-                </div>
-            </div>
-
-<div class="swiper-slide">
-                <div class="client-card">
-                    <h3>JIOTV Mumbai Masala</h3>
-                </div>
-            </div>
-
-<div class="swiper-slide">
-                <div class="client-card">
-                    <h3>Optimistic Media</h3>
-                </div>
-            </div>
-
+            <p class="designation">Light Designer</p>
 
         </div>
 
-    </div>
+        <!-- RIGHT -->
+        <div class="designer-right">
 
-    <div class="client-buttons">
-        <button class="prevBtn">Prev</button>
-        <button class="nextBtn">Next</button>
-    </div>
-
-</section>
-
-<section class="about-section">
-
-    <div class="about-container">
-
-        <!-- Left Image -->
-        <div class="about-image">
-            <img src="img/ab.jpeg" alt="About Stage Light Solutions">
-        </div>
-
-        <!-- Right Content -->
-        <div class="about-content">
             <h2>Creating Unforgettable Event Experiences</h2>
 
             <p>
-               Whether it’s an electrifying EDM or rock show, an elegant wedding, a corporate launch, live theatre, an award night, or a film production, we deliver comprehensive lighting solutions that enhance mood, storytelling, and audience engagement.
+                Whether it's an electrifying EDM or rock show, an elegant wedding,
+                a corporate launch, live theatre, an award night, or a film production,
+                we deliver comprehensive lighting solutions that enhance mood,
+                and audience engagement.
             </p>
 
-        
-            <a href="https://wa.me/918108438962" target="_blank"  class="about-btn">
+            <a href="https://wa.me/918108438962" class="contact-btn">
                 Contact Us
             </a>
 
@@ -316,54 +244,58 @@
 
 </section>
 
-<section class="equipment-section">
 
-    <div class="equipment-heading">
-        <span>──────── LIGHT DESK</span>
-        <h2>Advanced Lighting Programming Desks</h2>
+
+
+<section class="lightdesk-section">
+
+    <div class="lightdesk-heading">
+
+        <p>──── LIGHT DESK</p>
+
     </div>
 
-    <div class="equipment-grid">
+    <div class="lightdesk-grid">
 
-        <div class="equipment-card">
+        <div class="desk-card">
             <img src="img/gm32.jpg" alt="">
-            <div class="equipment-overlay">
-                GrandMA3
+            <div class="desk-overlay">
+                <h3>GrandMA3</h3>
             </div>
         </div>
 
-        <div class="equipment-card">
+        <div class="desk-card">
             <img src="img/gm2.jpg" alt="">
-            <div class="equipment-overlay">
-                GrandMA2
+            <div class="desk-overlay">
+                <h3>GrandMA2</h3>
             </div>
         </div>
 
-        <div class="equipment-card">
+        <div class="desk-card">
             <img src="img/cv3.jpg" alt="">
-            <div class="equipment-overlay">
-                Code V3
+            <div class="desk-overlay">
+                <h3>Code V3</h3>
             </div>
         </div>
 
-        <div class="equipment-card">
+        <div class="desk-card">
             <img src="img/aa.jpg" alt="">
-            <div class="equipment-overlay">
-                Avolites Arena
+            <div class="desk-overlay">
+                <h3>  Avolites Arena</h3>
             </div>
         </div>
 
-        <div class="equipment-card">
+        <div class="desk-card">
             <img src="img/at.jpg" alt="">
-            <div class="equipment-overlay">
-                Avolites Tiger Touch
+            <div class="desk-overlay">
+                <h3>Avolites Tiger Touch</h3>
             </div>
         </div>
 
-        <div class="equipment-card">
+        <div class="desk-card">
             <img src="img/ap.jpg" alt="">
-            <div class="equipment-overlay">
-                Avolites Pearl
+            <div class="desk-overlay">
+                <h3>Avolites Pearl</h3>
             </div>
         </div>
 
@@ -371,63 +303,98 @@
 
 </section>
 
-<footer class="footer">
+<section class="clients-section" id="clients">
+
+    <div class="clients-heading">
+    <h2>
+        <span>C</span><span>L</span><span>I</span><span>E</span><span>N</span><span>T</span><span>S</span>
+    </h2>
+    </div>
+
+    <div class="swiper clientSwiper">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide"><div class="client-card">Amazon India</div></div>
+
+            <div class="swiper-slide"><div class="client-card">Kon Honar Maharashtracha Ladka Kirtankar</div></div>
+
+            <div class="swiper-slide"><div class="client-card">Movers and Shakers - Season 2</div></div>
+
+            <div class="swiper-slide"><div class="client-card">Star Majha</div></div>
+
+            <div class="swiper-slide"><div class="client-card">Electrocraft</div></div>
+
+            <div class="swiper-slide"><div class="client-card">Modern Stage Service, Delhi</div></div>
+
+            <div class="swiper-slide"><div class="client-card">TCA Lights</div></div>
+
+            <div class="swiper-slide"><div class="client-card">FLOS</div></div>
+
+            <div class="swiper-slide"><div class="client-card">Showtime</div></div>
+            <div class="swiper-slide"><div class="client-card">Wizcraft</div></div>
+            <div class="swiper-slide"><div class="client-card">Landmark Events</div></div>
+            <div class="swiper-slide"><div class="client-card">Ulhas Sahastrabudhe Lights</div></div>
+            <div class="swiper-slide"><div class="client-card">Jai Mahashtra</div></div>
+            <div class="swiper-slide"><div class="client-card">Reliance Media Works</div></div>
+            <div class="swiper-slide"><div class="client-card">JIOTV Mumbai Masala</div></div>
+            <div class="swiper-slide"><div class="client-card">Optimistic Media</div></div>
+            </div>
+
+      
+    </div>
+
+</section>
+
+
+<footer class="footer" id="ft">
 
     <div class="footer-container">
 
-        <!-- Left -->
-        <div class="footer-left">
+               <!-- Quick Links -->
+
+        <div class="footer-links">
 
             <h3>Quick Links</h3>
 
-            <a href="#hm">Home</a>
+            <a href="#home">Home</a>
             <a href="https://events-shows.my.canva.site/">Events</a>
             <a href="#services">Services</a>
             <a href="#clients">Clients</a>
 
         </div>
 
-        <!-- Right -->
-        <div class="footer-right" id="ft">
+        <!-- Contact -->
+
+        <div class="footer-contact">
 
             <h3>Contact Us</h3>
 
-            <a href="tel:+918108438962" class="footer-contact">
-                <img src="img/ph.png" alt="Phone">
-                <span>+91 8108438962</span>
-            </a>
+            <a href="tel:+918108438962">
+    <i class="fa-solid fa-phone"></i> +91 8108438962
+</a>
 
-            <div class="footer-contact">
-                <img src="img/location.png" alt="Location">
-                <span>Stage Light Solutions, Kartik, Kharegaon, Kalwa, Thane, Maharashtra 400605</span>
-            </div>
+<a href="https://wa.me/918108438962" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+</a>
 
-            <a href="https://wa.me/918108438962" target="_blank" class="footer-contact">
-                <img src="img/wp.png" alt="WhatsApp">
-                <span>+91 8108438962</span>
-            </a>
-
-            <a href="https://www.instagram.com/santosh.jadhav.sls/" target="_blank" class="footer-contact">
-                <img src="img/in.png" alt="Instagram">
-                <span>@santosh.jadhav.sls</span>
-            </a>
+<a href="https://instagram.com/santosh.jadhav.sls" target="_blank">
+    <i class="fa-brands fa-instagram"></i> @santosh.jadhav.sls
+</a>
 
         </div>
 
     </div>
 
     <div class="footer-bottom">
+
         © 2026 Stage Light Solutions. All Rights Reserved.
+
     </div>
 
 </footer>
 
-<!-- Font Awesome CDN for icons -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="script.js"></script>
 <script src="MAIN.js"></script>
 </body>
 </html>
